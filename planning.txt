@@ -1,0 +1,110 @@
+1. WHAT is this project?
+
+A backend (and later frontend) system where:
+
+Students are registered
+Attendance is marked daily
+You can track:
+Present / Absent
+Attendance percentage
+History per student
+
+2. CORE FUNCTIONALITY (What your app should do)
+Think in terms of features:
+
+User (Student):
+    Register student
+    Login (optional initially)
+    View own attendance
+
+Attendance:
+    Mark attendance (Present / Absent)
+    Track by date
+    Prevent duplicate marking for same day
+
+Reports:
+    Get attendance by:
+    Student
+    Date range
+    Calculate percentage
+
+3. MODELS (Database Design)
+You mainly need 2 models
+
+1.Student Model
+    Fields:
+        name
+        email
+        rollNumber (unique)
+        class / section
+        createdAt
+    Logic:
+        Each student must be unique
+        rollNumber or email should be unique
+
+2. Attendance Model
+    Fields:
+        studentId (reference to Student)
+        date
+        status (Present / Absent)
+        markedBy (optional: teacher/admin)
+        timestamp
+    Logic:
+        One student → one attendance per day
+        Prevent duplicate entries:
+        (studentId + date) should be unique
+
+
+5. ROUTES (API DESIGN)
+Think REST API structure
+
+Student Routes:
+    1.Create Student
+        POST /students
+        Logic:
+            Validate input
+            Check duplicate rollNumber/email
+            Save student
+
+    2.Get All Students
+        GET /students
+        Logic:
+            Fetch all students
+
+    3.Get Single Student
+        GET /students/:id
+
+    4. Delete Student
+        DELETE /students/:id
+
+Attendance Routes:
+    1.Mark Attendance
+        POST /attendance
+        Logic:
+            Input:
+                studentId
+                date
+                status
+            Steps:
+                1.Check if student exists
+                2.Check if attendance already marked for that date
+                    If yes → reject
+                3.Save attendance
+
+    2. Get Attendance by Student
+        GET /attendance/student/:studentId
+        Logic:
+            Return all attendance records for a student
+
+    3. Get Attendance by Date
+        GET /attendance/date/:date
+        Logic:
+            Show all students with their attendance on that date
+
+    4. Update Attendance
+        PUT /attendance/:id
+        Logic:
+            Change status (Present ↔ Absent)
+
+    5. Delete Attendance
+        DELETE /attendance/:id

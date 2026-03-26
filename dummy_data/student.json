@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Amit Sharma",
+    "email": "amit.sharma1@example.com",
+    "rollNumber": "101",
+    "class": "10",
+    "section": "A"
+  },
+  {
+    "name": "Priya Verma",
+    "email": "priya.verma2@example.com",
+    "rollNumber": "102",
+    "class": "10",
+    "section": "A"
+    
+  },
+  {
+    "name": "Rahul Kumar",
+    "email": "rahul.kumar3@example.com",
+    "rollNumber": "103",
+    "class": "10",
+    "section": "B"
+    
+  },
+  {
+    "name": "Sneha Gupta",
+    "email": "sneha.gupta4@example.com",
+    "rollNumber": "104",
+    "class": "10",
+    "section": "B"
+  },
+  {
+    "name": "Vikram Singh",
+    "email": "vikram.singh5@example.com",
+    "rollNumber": "105",
+    "class": "9",
+    "section": "A"
+  },
+  {
+    "name": "Neha Patel",
+    "email": "neha.patel6@example.com",
+    "rollNumber": "106",
+    "class": "9",
+    "section": "A"
+  },
+  {
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy7@example.com",
+    "rollNumber": "107",
+    "class": "9",
+    "section": "B"
+  },
+  {
+    "name": "Pooja Yadav",
+    "email": "pooja.yadav8@example.com",
+    "rollNumber": "108",
+    "class": "9",
+    "section": "B"
+  },
+  {
+    "name": "Karan Mehta",
+    "email": "karan.mehta9@example.com",
+    "rollNumber": "109",
+    "class": "8",
+    "section": "A"
+  },
+  {
+    "name": "Anjali Das",
+    "email": "anjali.das10@example.com",
+    "rollNumber": "110",
+    "class": "8",
+    "section": "A"
+  }
+]
